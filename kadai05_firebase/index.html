@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャット→議事録アプリ</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <div class="title-wrapper">
+                <h1 class="title">FlowToStock</h1>
+                <p class="subtitle">-チャットから議事録作ろう！-</p>
+                <div class="date-wrapper">
+                    <label for="date">DATE:</label>
+                        <input type = "date" name="date" id="meetingdate">
+                </div>
+                <div class="support-wrapper">
+                    <a href="support.php">Support</a>
+                </div>
+            </div>
+            <!-- Navimenu -->
+            <!-- <nav class="headernavi" >
+                <h2 class="headernavi-menu start">Start</h2>
+                <h2 class="headernavi-menu history">History</h2>
+            </nav> -->
+            <!-- Login User Profile -->
+            <div class="username-wrapper">
+                <div class="icon">
+                    <img src="img/profile_icon.png" alt="icon">
+                </div>
+                <div class="username" id="username"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- 議事録エリア -->
+        <div class="main-wrapper">
+            <div class="notes-container">
+                <div class="notes-top">
+                    <h2 class="notes-title">Meeting Notes</h2>
+                    <!-- Title入力欄 -->
+                        <div class="meeting-title">
+                        </div>
+                    <!-- 作成日付  -->
+                    
+                </div>
+                    <div class="agenda-container">
+                        <!-- Agenda -->
+                        <h2 class="menu">AGENDA</h2>
+                        <div id="agenda-area" class="agenda-area contents">
+                            <ul id="agendalist" contenteditable="true">
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ToDo -->
+                    <div class="todo-container">
+                        <h2 class="menu">ToDo</h2>
+                        <div id="todo-area" class="agenda-area contents">
+                            <ul id="todolist">
+                                <!-- <li class="testbtn" id="testbtn">test</li> -->
+                            </ul>
+                        </div>
+                    </div>    
+                    <!-- Conclusion -->
+                    <div class="decision-container">
+                        <h2 class="menu">Decision</h2>
+                        <div id="decision-area" class="agenda-area contents">
+                            <ul id="decisionlist">
+                            </ul>
+                        </div>
+                    </div>    
+                    
+
+
+                </div>
+        
+            <div class="chat-container">
+                <!-- チャット送信エリア -->
+                <h2 class="chat-title">Discussion</h2>
+                <div id="post-area" class="post-area">
+                      <div class="chat-text">
+                            <div class="post-user" id="post-user"></div>
+                            <textarea name="message" id="message" cols="40" rows="5"></textarea>
+                       </div>
+                       <button id="send">send</button>
+                </div> 
+            <!--チャットの履歴表示エリア  -->
+            <div class="chat-history-wrapper">
+                <div id="history-container">
+                    <ul id="chat-history" class="chat-history">
+
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+ <!-- script -->
+   <!-- JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <!-- Firebase -->
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+   <!-- Add Firebase products that you want to use -->
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth__ja.js"></script>
+   <!-- Firebase Auth -->
+   <script src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth__ja.js"></script>
+   <!-- Firebase config設定読み込み -->
+   <script src="js/config.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>

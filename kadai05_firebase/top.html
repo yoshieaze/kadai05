@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャット→議事録アプリ</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Firebase Auth https://github.com/firebase/firebaseui-web -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth.css" /> 
+</head>
+<body>
+    <div id="firebaseui-auth-container"></div>
+
+
+   <!-- JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <!-- Firebase -->
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+   <!-- Add Firebase products that you want to use -->
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth__ja.js"></script>
+   <!-- Firebase Auth -->
+   <script src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth__ja.js"></script>
+   <!-- Firebase config設定読み込み -->
+   <script src="js/config.js"></script>
+   <script>
+    //----------------------------------------------
+    // Firebase UIの設定 
+    //----------------------------------------------
+    let uiConfig = {
+        // ログイン完了時のリダイレクト先
+        signInSuccessUrl: 'index.html',
+
+        // 利用する認証機能
+        signInOptions: [
+          firebase.auth.EmailAuthProvider.PROVIDER_ID  //メール認証
+        ],
+
+        // 利用規約のURL(任意で設定)
+        tosUrl: 'https://www.google.com/',
+        // プライバシーポリシーのURL(任意で設定)
+        privacyPolicyUrl: 'https://www.yahoo.co.jp'
+      };
+
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+   </script>
+</body>
+</html>

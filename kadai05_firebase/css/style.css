@@ -1,0 +1,213 @@
+html{
+    /* background-color: black; */
+    font-family: Lobster', cursive,'Noto Sans JP', sans-serif;'Bebas Neue', cursive, Arial, Helvetica, sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+body{
+    background-image: url(../img/forest-3622519_1280.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: green;
+}
+
+/* header */
+/* header{
+    color: white;
+} */
+.header-wrapper{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 1px solid gainsboro;
+
+}
+
+.title-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.date-wrapper{
+    margin-left: 50px;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.support-wrapper{
+    margin-left: 15px;
+}    
+.username-wrapper{
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.icon{
+    width: 80px;
+    padding: 10px;
+}
+
+.icon>img{
+    width: 50%;
+    height: auto;
+
+}
+
+.username{
+    padding: 10px;
+}
+
+/* header navi */
+/* header{
+    color: white;
+} */
+.headernavi{
+    display: flex; 
+    align-items: center;
+}
+
+.headernavi-menu{
+    width: 150px;
+    height: 100%;
+}
+
+/* main */
+main{
+    color: green;
+}
+
+.main-wrapper{
+    display: flex;
+}
+
+.contents{
+    background-color:rgba(255,255,255,0.6);
+}
+
+/* notes */
+.notes-container{
+    width: 65%;
+    height: 1200px;
+}
+
+#createdate{
+    color: gray;
+    margin: 10px 0 0 10px;
+}
+
+.agenda-area{
+    border: 1px solid gainsboro; 
+    min-height: 100px;
+    width: 95%;
+    margin:10px 0 0 10px ;
+    line-height: 1.2;
+}
+
+.agenda-area ul{
+    list-style:square ;
+    padding-left: 20px;
+}
+
+.menu{
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+
+.meeting-title{
+    margin: 10px 0 0 10px;
+}
+
+
+/* chat */
+/* post-area */
+.chat-container{
+    width: 35%;
+    height: 1200px;
+    border-left:1px solid gainsboro; ;
+}
+
+.chat-title,
+.notes-title{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0 0 10px;
+}
+
+.post-user{
+    padding: 10px 0 0 10px;
+    font-size: 16px;
+}
+
+
+#message{
+    border: 1px solid gainsboro; 
+    border-radius: 8px;
+    margin: 10px auto auto 10px;
+    width: 90%;
+    background-color:rgba(255,255,255,0.6);
+}
+
+#send{
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid gainsboro;
+    background-color:rgba(255,255,255,0.6);
+    float: right;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* chat-history */
+.chat-history-wrapper{
+    width: 90%;
+    margin: 45px 10px;
+}
+
+.chat-history>li{
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    background-color:rgba(255,255,255,0.6);
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.chatnavi{
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+    margin: 10px 5px;
+    padding: 3px;
+    float: right;
+}
+
+.chatnavi a{
+    margin-left:10px;
+    /* display: block; */
+}
+
+
+.postdate{
+    font-size: 9px;
+    color: gray;
+    float: right;
+}
+
+
+
+
+
+/* Discussionの日時は小さく表示したい */
+/* 自分の発言用のClass */
+/* 違う人用の発言のClass */
+/* 発言共通のClass */
